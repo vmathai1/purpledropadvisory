@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Fragment Mono', ui-monospace, monospace;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: #665b7d;
+  -webkit-font-smoothing: antialiased;
+}
