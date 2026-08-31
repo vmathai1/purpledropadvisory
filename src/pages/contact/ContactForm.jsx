@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import mail from '../../assets/icons/mail.svg';
-import mapPin from '../../assets/icons/map-pin.svg';
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -21,28 +19,6 @@ export default function ContactForm() {
             Whether you are an early-stage team mapping out your first handbooks or a
             scale-up seeking C-suite advisory, we are here to support your mission.
           </p>
-        </div>
-        <div className="flex flex-col gap-6">
-          <div className="flex gap-4 items-center">
-            <div className="bg-[#f0e7ff] rounded-full flex items-center justify-center size-10 shrink-0">
-              <img src={mail} alt="" className="size-[18px]" />
-            </div>
-            <div className="flex flex-col">
-              <p className="text-[13px] text-[#665b7d]">Email Us</p>
-              <p className="font-semibold text-[16px] text-[#0d0022]">hello@peopledrop.co</p>
-            </div>
-          </div>
-          <div className="flex gap-4 items-center">
-            <div className="bg-[#f0e7ff] rounded-full flex items-center justify-center size-10 shrink-0">
-              <img src={mapPin} alt="" className="size-[18px]" />
-            </div>
-            <div className="flex flex-col">
-              <p className="text-[13px] text-[#665b7d]">Headquarters</p>
-              <p className="font-semibold text-[16px] text-[#0d0022]">
-                450 Sansome St, San Francisco, CA 94111
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
