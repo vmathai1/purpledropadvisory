@@ -1,4 +1,4 @@
-import womanImg from '../../assets/images/services-strategy-woman.png';
+import strategyImg from '../../assets/images/ThinkingHRTransparent.png';
 import checkOrange from '../../assets/icons/check-orange-2.svg';
 import checkPurple from '../../assets/icons/check-purple.svg';
 
@@ -36,7 +36,7 @@ export default function PillarsSplit() {
     <section className="border-t border-[#f3f3fb] bg-[#f7f4fd]">
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-16 items-start px-6 lg:px-20 py-16 lg:py-24">
         <div className="hidden lg:block w-[420px] h-[560px] shrink-0 overflow-hidden">
-          <img src={womanImg} alt="" className="w-auto h-full max-w-none object-cover object-left" />
+          <img src={strategyImg} alt="" className="w-auto h-full max-w-none object-cover object-left" />
         </div>
         <div className="flex flex-col gap-12 flex-1">
           <div className="flex flex-col gap-6">

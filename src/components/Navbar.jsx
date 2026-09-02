@@ -25,8 +25,8 @@ export default function Navbar() {
               to={link.to}
               end
               className={({ isActive }) =>
-                `hover:text-[#5B21E0] transition-colors ${
-                  isActive ? 'text-[#5B21E0] font-medium' : ''
+                `relative transition-colors hover:text-[#5B21E0] after:pointer-events-none after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-[#5B21E0] after:transition-[width] after:duration-300 hover:after:w-1/2 ${
+                  isActive ? 'text-[#5B21E0] font-medium after:w-1/2' : ''
                 }`
               }
             >
@@ -36,7 +36,7 @@ export default function Navbar() {
         </nav>
         <Link
           to="/contact"
-          className="hidden md:block border border-[#b57900] text-[#b57900] text-[15px] font-semibold px-7 py-3.5 rounded-full hover:bg-[#b57900] hover:text-white transition-colors"
+          className="hidden md:block border border-[#b57900] text-[#b57900] text-[15px] font-semibold px-7 py-3.5 rounded-full btn-shine transition duration-200 hover:bg-[#b57900] hover:text-white hover:-translate-y-0.5 active:translate-y-0"
         >
           Book a Call
         </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-4 text-center border border-[#b57900] text-[#b57900] text-[15px] font-semibold px-7 py-3.5 rounded-full hover:bg-[#b57900] hover:text-white transition-colors"
+            className="mt-4 text-center border border-[#b57900] text-[#b57900] text-[15px] font-semibold px-7 py-3.5 rounded-full btn-shine transition duration-200 hover:bg-[#b57900] hover:text-white hover:-translate-y-0.5 active:translate-y-0"
           >
             Book a Call
           </Link>

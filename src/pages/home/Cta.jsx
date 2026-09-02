@@ -17,7 +17,7 @@ export default function Cta() {
         </div>
         <Link
           to="/contact"
-          className="flex gap-2 items-center bg-[#e49b08] text-black text-[15px] font-semibold px-7 py-3.5 rounded-full hover:brightness-95 transition"
+          className="flex gap-2 items-center bg-[#e49b08] text-black text-[15px] font-semibold px-7 py-3.5 rounded-full btn-shine transition duration-200 hover:brightness-95 hover:-translate-y-0.5 active:translate-y-0"
         >
           Book a Discovery Call
           <img src={arrowRight} alt="" className="size-4" />

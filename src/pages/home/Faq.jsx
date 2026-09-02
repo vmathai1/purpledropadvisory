@@ -26,7 +26,7 @@ export default function Faq() {
       <img
         src={faqWoman}
         alt=""
-        className="absolute inset-0 size-full object-cover object-left"
+        className="hidden md:block absolute inset-0 size-full object-cover object-left"
       />
       <div className="relative max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-16 items-start px-6 lg:px-20 py-16 lg:py-24">
         <div className="flex flex-col gap-6 items-start w-full lg:w-[400px] shrink-0">

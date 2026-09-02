@@ -67,7 +67,7 @@ export default function ContactForm() {
             </label>
             <button
               type="submit"
-              className="bg-[#7c2dfe] text-white text-[18px] rounded-full py-3.5 hover:brightness-95 transition"
+              className="bg-[#7c2dfe] text-white text-[18px] rounded-full py-3.5 btn-shine transition duration-200 hover:brightness-95 hover:-translate-y-0.5 active:translate-y-0"
             >
               Send Inquiry
             </button>
