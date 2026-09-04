@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import LegalModal from './LegalModal';
 import linkedin from '../assets/icons/linkedin.svg';
 
 const FIRM_LINKS = [
@@ -8,9 +10,16 @@ const FIRM_LINKS = [
   { label: 'Case Studies', to: '/testimonials' },
 ];
 
-const RESOURCE_LINKS = ['Guides', 'HR Checklists', 'Talent Market 2025', 'Founders Forum'];
+const RESOURCE_LINKS = [
+  { label: 'Guides' },
+  { label: 'HR Checklists', to: '/hr-checklist' },
+  { label: 'Talent Market 2026', to: '/talent-market-2026' },
+  { label: 'Founders Forum' },
+];
 
 export default function Footer() {
+  const [legalDoc, setLegalDoc] = useState(null);
+
   return (
     <footer className="w-full bg-white border-t border-[#f7f4fd]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-20 pt-16 lg:pt-20 pb-12">
@@ -33,11 +42,21 @@ export default function Footer() {
 
           <div className="flex flex-col gap-4 text-[14px] whitespace-nowrap">
             <p className="font-semibold text-[#0d0022]">Resources</p>
-            {RESOURCE_LINKS.map((label) => (
-              <p key={label} className="text-[#665b7d] leading-[22px]">
-                {label}
-              </p>
-            ))}
+            {RESOURCE_LINKS.map((link) =>
+              link.to ? (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className="text-[#665b7d] leading-[22px] hover:text-[#5B21E0]"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <p key={link.label} className="text-[#665b7d] leading-[22px]">
+                  {link.label}
+                </p>
+              ),
+            )}
           </div>
 
           <div className="flex flex-col gap-4 w-full lg:w-[240px]">
@@ -57,11 +76,25 @@ export default function Footer() {
         <div className="flex items-center justify-between border-t border-[#c6afed] pt-6 mt-16 text-[13px] text-[#665b7d] flex-wrap gap-4">
           <p>© 2025 PurpleDrop LLC. All rights reserved.</p>
           <div className="flex gap-6">
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
+            <button
+              type="button"
+              onClick={() => setLegalDoc('privacy')}
+              className="transition-colors hover:text-[#5B21E0]"
+            >
+              Privacy Policy
+            </button>
+            <button
+              type="button"
+              onClick={() => setLegalDoc('terms')}
+              className="transition-colors hover:text-[#5B21E0]"
+            >
+              Terms of Service
+            </button>
           </div>
         </div>
       </div>
+
+      <LegalModal doc={legalDoc} onClose={() => setLegalDoc(null)} />
     </footer>
   );
 }
